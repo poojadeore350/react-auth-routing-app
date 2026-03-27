@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+# 🔐 React Auth Routing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application demonstrating **routing, authentication flow, and protected routes** using React Router and Context API.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+* 🔑 Login & Logout functionality
+* 🔒 Protected Routes (Dashboard & Profile)
+* 💾 Authentication persistence using localStorage
+* ⚠️ Error handling for invalid credentials
+* 🔄 Redirect after login/logout
+* ❌ 404 Page for invalid routes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+* React
+* React Router DOM
+* Context API
+* JavaScript (ES6)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+│
+├── Pages/
+│   ├── Login.jsx
+│   ├── Dashboard.jsx
+│   ├── Profile.jsx
+│   ├── NotFound.jsx
+│
+├── Components/
+│   ├── ProtectedRoute.jsx
+│
+├── Context/
+│   ├── AuthContext.jsx
+│
+├── App.js
+├── index.js
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔐 Login Credentials
 
-### `npm run eject`
+```
+Email: admin@example.com
+Password: 123456
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚙️ Setup Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+git clone https://github.com/your-username/react-auth-routing-app.git
+```
 
-## Learn More
+2. Navigate to project folder:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+cd react-auth-routing-app
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Install dependencies:
 
-### Code Splitting
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Run the app:
 
-### Analyzing the Bundle Size
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🔄 Routing Flow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* `/login` → Login Page
+* `/dashboard` → Protected (requires login)
+* `/profile` → Protected (requires login)
+* `*` → 404 Page
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔒 Authentication Flow
 
-### Deployment
+* User logs in using predefined credentials
+* Auth state is stored in localStorage
+* Protected routes check authentication
+* Logout clears session and redirects to login
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🎯 Bonus Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Context API for global auth state
+* Clean component-based architecture
+
+---
+
+## 📸 Screenshots
+
+(Add screenshots here)
+
+---
+
+## 📌 Future Improvements
+
+* Add backend authentication
+* Improve UI with styling
+* Add JWT-based authentication
+
+---
+
+## 👨‍💻 Author
+
+Pooja Deore
+
+---
